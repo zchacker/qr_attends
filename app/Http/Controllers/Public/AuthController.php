@@ -102,7 +102,11 @@ class AuthController extends Controller
 
     public function logout(Request $request)
     {
-        
+        if (Auth::guard('admin')->check()) // this means that the admins was logged in.
+        {
+            Auth::guard('admin')->logout();
+            return redirect()->route('home');
+        }
     }
 
 }
