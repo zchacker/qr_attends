@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* dashboard menu */
+.navbar_item{
+    @apply p-0 rounded-md mt-3 flex items-center  duration-300 cursor-pointer transition-all  text-white hover:text-yellow-300 hover:border-r-8 hover:border-yellow-300 hover:pr-2
+}
+
+.navbar_active{
+    @apply !text-white bg-slate-900 rounded-md px-0 hover:border-yellow-400
+}
+
+.navbar_logout{
+    @apply !text-red-600 hover:border-yellow-400
+}
+
+.navbar_item_text{
+    @apply w-full h-full p-2.5 text-right text-[15px] ml-4 text-gray-200 transition-all duration-500 hover:text-yellow-300 font-bold
+}
+
+.navbar_item_header{
+    @apply p-0 mt-3 flex items-center  duration-700  transition-all 
+}
+
+.navbar_item_text_header{
+    @apply w-full h-full p-2.5 text-right text-[15px] ml-4  transition-all duration-500 font-bold
+}
+
+.nav_item_header{
+    @apply w-full h-full p-2.5 text-right text-[15px] ml-4 text-red-600  font-bold
+}
+
+/* dashboad style  */
+.content{ 
+    @apply w-full py-0  min-h-screen mt-[20%] lg:mt-0 mb-[100px]
+}
+
+/* table style */
+.table_old{
+    @apply w-full text-sm text-right text-gray-500
+}
+
+.table{
+    @apply min-w-full divide-y divide-gray-300
+}
+
+.table_head{
+    @apply text-xs text-gray-50 uppercase bg-gray-200
+}
+
+.table_body{
+    @apply bg-white 
+}
+
+.table_column{
+    @apply  p-4 pl-8 text-slate-500
+}
+
+.table_row{
+    @apply  hover:bg-gray-100 border-l border-r border-gray-300  border-b border-b-gray-300
+}
+
+.ltr-grid {
+  direction: ltr;
+}
+
+
+/* button styles */
+.normal_button{
+    @apply inline-flex items-center justify-center rounded-full border border-transparent bg-yellow-300 px-8 py-2 text-sm font-medium text-black shadow-md shadow-gray-400 hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:w-auto 
+}
+
+.download_button{
+    @apply inline-flex items-center justify-center rounded-full border border-transparent bg-blue-500 px-8 py-2 text-sm font-medium text-white shadow-md shadow-gray-400 hover:bg-blue-500/80 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:w-auto 
+}
+
+.action_btn{
+    @apply inline-flex items-center justify-center rounded-full border border-transparent bg-purple-800 px-8 py-2 text-sm font-medium text-white shadow-md shadow-gray-400 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:w-auto 
+}
+/*form style*/
+.lable_form{
+    @apply block text-gray-700 text-sm font-bold mb-2
+}
+
+.form_input{
+    @apply block w-full md:w-1/2 border-gray-400 border ring-yellow-300 ring-inset focus:border-yellow-300 focus:ring-yellow-300 focus:outline-yellow-300 focus:outline-0 shadow-sm rounded-md p-2
+}
+
+.form_dash_input{
+    @apply block min-h-[40px] w-full bg-gray-50 border-gray-300 focus:bg-white focus:border-blue-400 focus:border focus:outline-blue-400 focus:outline-1 border shadow-sm rounded-md p-2
+}
+
+.lable_form_number{
+    @apply block text-gray-700 text-sm font-bold mb-2 min-w-[120px]
+}
+
+.form_dash_input_numbers{
+    @apply block min-h-[40px] max-w-[80px] w-full bg-gray-50 border-gray-300 focus:bg-white focus:border-blue-400 focus:border focus:outline-blue-400 focus:outline-1 border shadow-sm rounded-md p-2
+}
+
+.link{
+    @apply text-black hover:text-blue-600 transition-all transform-gpu duration-500
+}
