@@ -38,6 +38,11 @@
                 </div>                                                                                                   
                 
                 <div class="navbar_item">                    
+                    <i class="las la-qrcode la-2x"></i>
+                    <a href="{{ route('admin.qr.list') }}" class="navbar_item_text"> {{__('qr_list')}} </a>
+                </div>
+
+                <div class="navbar_item">                    
                     <i class="las la-users la-2x"></i>
                     <a href="{{ route('admin.guest.list') }}" class="navbar_item_text"> المستخدمين </a>
                 </div>

@@ -34,6 +34,18 @@ Route::get('/visitor/{id}', [\App\Http\Controllers\Public\GuestsController::clas
 
 Route::group(['middleware' => ['auth:admin'], 'prefix' => 'admin'], function () {
 
+    // QR 
+    Route::get('/qr/list', [\App\Http\Controllers\Admin\QrCodesController::class, 'list'])->name('admin.qr.list');
+    Route::get('/qr/select_type', [\App\Http\Controllers\Admin\QrCodesController::class, 'select_type'])->name('admin.qr.select_type');    
+    Route::get('/qr/create/{type?}', [\App\Http\Controllers\Admin\QrCodesController::class, 'create'])->name('admin.qr.create');
+    Route::post('/qr/create/action', [\App\Http\Controllers\Admin\QrCodesController::class, 'create_action'])->name('admin.qr.create.action');
+    Route::get('/qr/show/{id}', [\App\Http\Controllers\Admin\QrCodesController::class, 'show'])->name('admin.qr.show');
+    Route::get('/qr/edit/{id}', [\App\Http\Controllers\Admin\QrCodesController::class, 'edit'])->name('admin.qr.edit');
+    Route::post('/qr/edit/{id}/action', [\App\Http\Controllers\Admin\QrCodesController::class, 'edit_action'])->name('admin.qr.edit.action');
+    Route::delete('/qr/delete/{qr_code}', [\App\Http\Controllers\Admin\QrCodesController::class, 'delete'])->name('admin.qr.delete');
+    
+    Route::get('/qr/download/{id}', [\App\Http\Controllers\Shared\QrContoller::class, 'generateQrPublic'])->name('admin.qr.download');
+
     // guests 
     Route::get('/guest/list', [\App\Http\Controllers\Admin\GuestsController::class, 'list'])->name('admin.guest.list');
     Route::get('/guest/create', [\App\Http\Controllers\Admin\GuestsController::class, 'create'])->name('admin.guest.create');
@@ -51,6 +63,7 @@ Route::group(['middleware' => ['auth:admin'], 'prefix' => 'admin'], function () 
 
     // generate CSV file
     Route::get('/export-csv', [\App\Http\Controllers\Admin\ExportController::class, 'exportToCSV'])->name('admin.export.csv');
+    Route::get('/export-csv/attends', [\App\Http\Controllers\Admin\ExportController::class, 'exportAttendsToCSV'])->name('admin.export.attends.csv');
 
     // visits
     Route::get('/guest/visits', [\App\Http\Controllers\Admin\GuestsController::class, 'visits'])->name('admin.guest.visits');

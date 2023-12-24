@@ -30,13 +30,15 @@
                         <form action="{{ route('admin.guest.upload.action') }}" method="post" enctype="multipart/form-data" class="w-full">
                             @csrf                            
                             
-                            <div class="mb-4">
+                            <a href="{{ asset('Test.csv') }}" class="text-blue-500 hover:underline mb-8">تحميل نموذج رفع البيانات</a>
+
+                            <div class="mb-4 mt-4">
                                 <label for="csv_file" class="lable_form">{{ __('file') }}</label>
-                                <input type="file" name="csv_file" id="csv_file" class="form_input"  />
+                                <input type="file" name="csv_file" id="csv_file" class="form_input" accept=".csv" />
                             </div>
                             
                             <div class="mb-4">
-                                <input type="submit" value="{{ __('save') }}" class="bg-green-700 text-white rounded-md py-2 px-4" />
+                                <input type="submit" value="{{ __('save') }}" class="action_btn" />
                             </div>
 
                         </form>

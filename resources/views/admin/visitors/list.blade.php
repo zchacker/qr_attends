@@ -19,7 +19,11 @@
                                     {{ __('total').' : '.$sum}}
                                 </p>
                             </div>
-                            
+                            <div class="w-1/3 flex gap-4 justify-end">
+                                <div>
+                                    <a href="{{ route('admin.export.attends.csv') }}" class="download_button"> {{__('download_csv')}} </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 

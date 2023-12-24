@@ -3,6 +3,7 @@
     "password_required":"الرقم السري مطلوب",
     "worng_password":"البريد الالكتروني أو كلمة المرور خطأ",
     "unknown_error":"خطأ غير معروف",
+    "not_save_error":"لم يتم الحفظ",
     "name":"الاسم",
     "email":"الإيميل",
     "phone":"الهاتف",
@@ -22,5 +23,19 @@
     "save":"حفظ",
     "update_password":"تحديث كلمة المرور",
     "current-password":"كلمة المرور الحالية",
-    "new-password":"كلمة المرور الجديدة"
+    "new-password":"كلمة المرور الجديدة",
+    "file":"ارفع ملف من نوع CSV",
+    "download_csv":"تحميل ملف بيانات الحضور",
+    "qr_list":"أكواد QR",
+    "qr_code":"رمز QR",
+    "type":"النوع",
+    "visits":"الزيارت",
+    "qr_list_menu":"قائمة اكواد QR",
+    "add_qr":"إضافة QR",
+    "select_qr_type":"اختر نوع ال QR",
+    "pdf_file":"رفع ملف PDF",
+    "youtube_url":"رابط فديو اليوتيوب",
+    "website_url":"رابط الموقع الالكتروني",
+    "generate_qr":"توليد QR",
+    "download_qr":"تحميل الرمز"
 }

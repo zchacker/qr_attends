@@ -160,9 +160,9 @@ class GuestsController extends Controller
     {
         $rules = array(
             'name' => 'required',
-            'email' => 'required|unique:users,email',
-            'phone' => 'required|unique:users,phone',
-            'password' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            //'password' => 'required',
         );
 
         $messages = [
